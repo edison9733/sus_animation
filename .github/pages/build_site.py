@@ -31,6 +31,12 @@ for branch, name, date in sorted(rows, key=lambda r: version_key(r[1]), reverse=
     what = words("_".join(parts[3:])) if len(parts) > 3 else ""
     latest = branch == "main"
     size = (site / name).stat().st_size / 1e6
+    web = site / "web" / name
+    light = web.exists()
+    play = f"web/{name}" if light else name
+    play_mb = (web if light else site / name).stat().st_size / 1e6
+    poster = f"web/{Path(name).stem}.jpg"
+    poster_attr = f' poster="{html.escape(poster)}"' if (site / poster).exists() else ""
     e = html.escape
     cards.append(f"""
   <article class="card{' latest' if latest else ''}" id="{e(ver)}">
@@ -39,8 +45,8 @@ for branch, name, date in sorted(rows, key=lambda r: version_key(r[1]), reverse=
       <p class="what">{e(what[:1].upper() + what[1:])}</p>
       <p class="meta">{e(project)} · {e(length)} · branch <a href="{REPO}/tree/{e(branch)}"><code>{e(branch)}</code></a></p>
     </header>
-    <video controls playsinline preload="metadata" src="{e(name)}#t=0.1"></video>
-    <p class="links"><a href="{e(name)}">Open the MP4 on its own</a> · <a href="{e(name)}" download>Download ({size:.1f} MB)</a></p>
+    <video controls playsinline preload="none"{poster_attr} src="{e(play)}"></video>
+    <p class="links">Plays a light {'720p copy' if light else 'copy'} ({play_mb:.1f} MB) · <a href="{e(name)}">Full quality</a> · <a href="{e(name)}" download>Download the original ({size:.1f} MB)</a></p>
   </article>""")
 
 page = f"""<!doctype html>
