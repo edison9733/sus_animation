@@ -1,10 +1,21 @@
 # FloodSafe Sanitation Gambella: pitch animation
 
+## 📌 Watch the videos (MP4)
+
+**Latest: [▶ v3.1, 48.5 s, with the Anatomy gauge scene](https://github.com/edison9733/sus_animation/blob/main/v3.1_FloodSafe-Gambella_48s_teardown-film-with-anatomy-gauge-scene.mp4)**
+
+| Version | Watch on GitHub | Download the MP4 | Branch |
+|---|---|---|---|
+| **v3.1 (latest)** | [▶ v3.1_FloodSafe-Gambella_48s_teardown-film-with-anatomy-gauge-scene.mp4](https://github.com/edison9733/sus_animation/blob/main/v3.1_FloodSafe-Gambella_48s_teardown-film-with-anatomy-gauge-scene.mp4) | [⬇ download (17.7 MB)](https://github.com/edison9733/sus_animation/raw/main/v3.1_FloodSafe-Gambella_48s_teardown-film-with-anatomy-gauge-scene.mp4) | `main` |
+| v3 | [▶ v3_FloodSafe-Gambella_48s_teardown-cutaway-on-team-maps-and-data.mp4](https://github.com/edison9733/sus_animation/blob/v3-gambella-data-48s/v3_FloodSafe-Gambella_48s_teardown-cutaway-on-team-maps-and-data.mp4) | [⬇ download (46.5 MB)](https://github.com/edison9733/sus_animation/raw/v3-gambella-data-48s/v3_FloodSafe-Gambella_48s_teardown-cutaway-on-team-maps-and-data.mp4) | `v3-gambella-data-48s` |
+| v2 | [▶ v2_FloodSafe_30s_teardown-turntable-cutaway-global-figures.mp4](https://github.com/edison9733/sus_animation/blob/v2-teardown-turntable-30s/v2_FloodSafe_30s_teardown-turntable-cutaway-global-figures.mp4) | [⬇ download (17.9 MB)](https://github.com/edison9733/sus_animation/raw/v2-teardown-turntable-30s/v2_FloodSafe_30s_teardown-turntable-cutaway-global-figures.mp4) | `v2-teardown-turntable-30s` |
+| v1 | `v1_FloodSafe_30s_flat-2D-ground-cutaway-deck-colours.mp4` (missing, no export found) | — | `v1-flat-2d-cutaway-30s` |
+
+"Watch" opens the video in GitHub's player. "Download" saves the MP4 file.
+
 This repo holds the pitch animation for **FloodSafe Sanitation Gambella**, a GSC 2026–27 Student Challenge entry (Phase 1, IGNITE). The project is a low-cost kit that upgrades existing pit latrines so they survive floods and droughts. The pilot covers Jikawo, Wantawo and Lare in Gambela, western Ethiopia, plus one refugee camp.
 
 > **Rule: the latest animation is always on `main`.** Every earlier animation lives on its own branch, with its own MP4. Every MP4's file name is a one-line description of that version.
-
-**Latest video (on `main`):** [`v3.1_FloodSafe-Gambella_48s_teardown-film-with-anatomy-gauge-scene.mp4`](v3.1_FloodSafe-Gambella_48s_teardown-film-with-anatomy-gauge-scene.mp4)
 
 ## Branches: one per animation version
 
@@ -56,7 +67,9 @@ skills/                          agent skills used (see below)
    - Replace the source.
    - Delete the old MP4.
    - Add the new MP4 at the repo root, named `v<N>_<what-it-is-in-one-line>.mp4`: no spaces, words joined with `-`, parts with `_`.
-3. **Update the branch table above.** Add a row for the new version and move "(latest)". Keep one line per branch.
+3. **Update the tables above.**
+   - **Videos table:** add a row with "Watch" (`https://github.com/edison9733/sus_animation/blob/<branch>/<file>.mp4`) and "Download" (`.../raw/<branch>/<file>.mp4`) links. Point the old latest row at its new branch, and the "Latest" line at the new MP4 on `main`.
+   - **Branch table:** add a row for the new version and move "(latest)". Keep one line per branch.
 4. Commit and push both branches.
 
 ## Sources and links

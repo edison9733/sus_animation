@@ -9,7 +9,7 @@ This repo holds the FloodSafe Sanitation Gambella pitch animation. `README.md` h
 3. **When a new version is made:**
    - **Save the old one first.** Branch off `main` before changing anything, name the branch after the version that is on `main` now, keep only that version's MP4 on it, and push it.
    - **Then update `main`.** Replace the source and the MP4 there.
-   - **Then update the README.** Add one line per branch to the branch table and move "(latest)". Never delete an old branch.
+   - **Then update the README.** Add the new MP4's "Watch" and "Download" links to the pinned "📌 Watch the videos" table at the top, and re-point the old version's links to its branch. Add one line per branch to the branch table and move "(latest)". Never delete an old branch.
 4. **Two parts.** `context/` is what the film says and where its figures come from. `animation/` is the source, the tools and the agent skills (`skills/`). Keep new files in the right part.
 5. **Figures need a source.** Every number on screen must come from `context/data-pack/` and be listed in the figure table in `context/HANDOFF_README.md`. Don't invent numbers. The proposal gives no sizes or groundwater depths, so drawings show none.
 6. **The Motion film is edited in the Claude app.** The live film is a Claude Motion artifact and can only be edited there. `animation/motion-v3/` is a snapshot of its source, kept for reference. To get its MP4, press Export on the film's page, or run `animation/tools/motion-export.mjs` (its header says how to set it up).
