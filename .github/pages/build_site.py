@@ -35,6 +35,9 @@ for branch, name, date in sorted(rows, key=lambda r: version_key(r[1]), reverse=
     light = web.exists()
     play = f"web/{name}" if light else name
     play_mb = (web if light else site / name).stat().st_size / 1e6
+    sd = site / "web" / "480" / name
+    sd_src = f"web/480/{name}" if sd.exists() else play
+    sd_mb = (sd if sd.exists() else site / play).stat().st_size / 1e6
     poster = f"web/{Path(name).stem}.jpg"
     poster_attr = f' poster="{html.escape(poster)}"' if (site / poster).exists() else ""
     e = html.escape
@@ -45,8 +48,8 @@ for branch, name, date in sorted(rows, key=lambda r: version_key(r[1]), reverse=
       <p class="what">{e(what[:1].upper() + what[1:])}</p>
       <p class="meta">{e(project)} · {e(length)} · branch <a href="{REPO}/tree/{e(branch)}"><code>{e(branch)}</code></a></p>
     </header>
-    <video controls playsinline preload="none"{poster_attr} src="{e(play)}"></video>
-    <p class="links">Plays a light {'720p copy' if light else 'copy'} ({play_mb:.1f} MB) · <a href="{e(name)}">Full quality</a> · <a href="{e(name)}" download>Download the original ({size:.1f} MB)</a></p>
+    <video controls playsinline preload="none"{poster_attr} src="{e(play)}" data-hd="{e(play)}" data-sd="{e(sd_src)}"></video>
+    <p class="links"><a href="{e(play)}">720p ({play_mb:.1f} MB)</a> · <a href="{e(sd_src)}">480p ({sd_mb:.1f} MB)</a> · <a href="{e(name)}">Full quality</a> · <a href="{e(name)}" download>Download the original ({size:.1f} MB)</a></p>
   </article>""")
 
 page = f"""<!doctype html>
@@ -73,15 +76,62 @@ page = f"""<!doctype html>
   a {{ color:var(--main) }}
   code {{ font-size:13px }}
   footer {{ color:var(--soft); font-size:14px }}
+  .quality {{ display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:0 0 22px; font-size:14px; color:var(--soft) }}
+  .quality button {{ font:inherit; color:var(--ink); background:var(--card); border:1px solid var(--line); border-radius:99px; padding:5px 14px; cursor:pointer }}
+  .quality button[aria-pressed="true"] {{ background:var(--main); border-color:var(--main); color:#fff }}
+  #qnote {{ flex-basis:100% }}
 </style>
 </head>
 <body>
 <main>
   <h1>FloodSafe Sanitation Gambella: pitch animation</h1>
   <p class="lede">Every version of the film, newest first. The latest is always the one on <code>main</code>; each older version lives on its own branch of <a href="{REPO}">the repo</a>.</p>
+  <div class="quality" role="group" aria-label="Video quality">Quality:
+    <button type="button" data-q="hd" aria-pressed="true">720p</button>
+    <button type="button" data-q="sd" aria-pressed="false">480p, for a slow connection</button>
+    <span id="qnote"></span>
+  </div>
   {''.join(cards)}
   <footer>Built from the repo by its "Video site" GitHub Action.</footer>
 </main>
+<script>
+(() => {{
+  const vids = [...document.querySelectorAll("video[data-sd]")];
+  const btns = [...document.querySelectorAll(".quality button")];
+  const note = document.getElementById("qnote");
+  const setQ = (q, why) => {{
+    vids.forEach((v) => {{
+      const want = v.dataset[q];
+      if (v.getAttribute("src") === want) return;
+      const t = v.currentTime, playing = !v.paused;
+      v.src = want;
+      if (t > 0) v.currentTime = t;
+      if (playing) v.play().catch(() => {{}});
+    }});
+    btns.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.q === q)));
+    note.textContent = why || "";
+  }};
+  btns.forEach((b) => b.addEventListener("click", () => {{
+    try {{ localStorage.setItem("fs-quality", b.dataset.q); }} catch (e) {{}}
+    setQ(b.dataset.q, "");
+  }}));
+  let saved = null;
+  try {{ saved = localStorage.getItem("fs-quality"); }} catch (e) {{}}
+  if (saved === "hd" || saved === "sd") {{ setQ(saved, ""); return; }}
+  // No choice saved: time the poster images. Below about 60 KB/s the 720p copy would pause to load, so play 480p.
+  const slow = "Your connection looks slow, so the 480p copy plays. Pick 720p for a sharper picture.";
+  window.addEventListener("load", () => {{
+    const rs = performance.getEntriesByType("resource").filter((r) => /\\.jpg$/.test(r.name) && r.transferSize > 0);
+    if (rs.length) {{
+      const bytes = rs.reduce((a, r) => a + r.transferSize, 0);
+      const ms = Math.max(...rs.map((r) => r.responseEnd)) - Math.min(...rs.map((r) => r.responseStart));
+      if (ms > 0 && (bytes / ms) * 1000 < 60000) setQ("sd", slow);
+    }} else if (navigator.connection && navigator.connection.downlink && navigator.connection.downlink < 0.5) {{
+      setQ("sd", slow);
+    }}
+  }});
+}})();
+</script>
 </body>
 </html>
 """

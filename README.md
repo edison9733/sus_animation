@@ -2,18 +2,18 @@
 
 ## 📌 Videos (MP4)
 
-**▶ [Play the latest: v3.1, 48.5 s, with the Anatomy gauge scene](https://edison9733.github.io/sus_animation/web/v3.1_FloodSafe-Gambella_48s_teardown-film-with-anatomy-gauge-scene.mp4)**
+**▶ [Play the latest: v3.1, 48.5 s, with the Anatomy gauge scene](https://edison9733.github.io/sus_animation/web/v3.1_FloodSafe-Gambella_48s_teardown-film-with-anatomy-gauge-scene.mp4)** · [slow connection? 480p](https://edison9733.github.io/sus_animation/web/480/v3.1_FloodSafe-Gambella_48s_teardown-film-with-anatomy-gauge-scene.mp4)
 
 **▶ [All versions on one page](https://edison9733.github.io/sus_animation/)**
 
-| Version | ▶ Play in the browser (fast, 720p) | Full quality (original MP4) | Branch |
+| Version | ▶ Play in the browser (720p, or 480p for a slow connection) | Full quality (original MP4) | Branch |
 |---|---|---|---|
-| **v3.1 (latest)** | [▶ v3.1_FloodSafe-Gambella_48s_teardown-film-with-anatomy-gauge-scene.mp4](https://edison9733.github.io/sus_animation/web/v3.1_FloodSafe-Gambella_48s_teardown-film-with-anatomy-gauge-scene.mp4) | [⬇ 1080p, 17.7 MB](https://edison9733.github.io/sus_animation/v3.1_FloodSafe-Gambella_48s_teardown-film-with-anatomy-gauge-scene.mp4) | `main` |
-| v3 | [▶ v3_FloodSafe-Gambella_48s_teardown-cutaway-on-team-maps-and-data.mp4](https://edison9733.github.io/sus_animation/web/v3_FloodSafe-Gambella_48s_teardown-cutaway-on-team-maps-and-data.mp4) | [⬇ 1080p, 46.5 MB](https://edison9733.github.io/sus_animation/v3_FloodSafe-Gambella_48s_teardown-cutaway-on-team-maps-and-data.mp4) | `v3-gambella-data-48s` |
-| v2 | [▶ v2_FloodSafe_30s_teardown-turntable-cutaway-global-figures.mp4](https://edison9733.github.io/sus_animation/web/v2_FloodSafe_30s_teardown-turntable-cutaway-global-figures.mp4) | [⬇ 720p, 17.9 MB](https://edison9733.github.io/sus_animation/v2_FloodSafe_30s_teardown-turntable-cutaway-global-figures.mp4) | `v2-teardown-turntable-30s` |
+| **v3.1 (latest)** | [▶ v3.1_FloodSafe-Gambella_48s_teardown-film-with-anatomy-gauge-scene.mp4](https://edison9733.github.io/sus_animation/web/v3.1_FloodSafe-Gambella_48s_teardown-film-with-anatomy-gauge-scene.mp4) · [▶ 480p, 1.0 MB](https://edison9733.github.io/sus_animation/web/480/v3.1_FloodSafe-Gambella_48s_teardown-film-with-anatomy-gauge-scene.mp4) | [⬇ 1080p, 17.7 MB](https://edison9733.github.io/sus_animation/v3.1_FloodSafe-Gambella_48s_teardown-film-with-anatomy-gauge-scene.mp4) | `main` |
+| v3 | [▶ v3_FloodSafe-Gambella_48s_teardown-cutaway-on-team-maps-and-data.mp4](https://edison9733.github.io/sus_animation/web/v3_FloodSafe-Gambella_48s_teardown-cutaway-on-team-maps-and-data.mp4) · [▶ 480p, 1.1 MB](https://edison9733.github.io/sus_animation/web/480/v3_FloodSafe-Gambella_48s_teardown-cutaway-on-team-maps-and-data.mp4) | [⬇ 1080p, 46.5 MB](https://edison9733.github.io/sus_animation/v3_FloodSafe-Gambella_48s_teardown-cutaway-on-team-maps-and-data.mp4) | `v3-gambella-data-48s` |
+| v2 | [▶ v2_FloodSafe_30s_teardown-turntable-cutaway-global-figures.mp4](https://edison9733.github.io/sus_animation/web/v2_FloodSafe_30s_teardown-turntable-cutaway-global-figures.mp4) · [▶ 480p, 0.7 MB](https://edison9733.github.io/sus_animation/web/480/v2_FloodSafe_30s_teardown-turntable-cutaway-global-figures.mp4) | [⬇ 720p, 17.9 MB](https://edison9733.github.io/sus_animation/v2_FloodSafe_30s_teardown-turntable-cutaway-global-figures.mp4) | `v2-teardown-turntable-30s` |
 | v1 | `v1_FloodSafe_30s_flat-2D-ground-cutaway-deck-colours.mp4` (missing, no export found) | — | `v1-flat-2d-cutaway-30s` |
 
-"Play" opens a light 720p copy (2 to 3.5 MB) in your browser's video player, so it starts fast even on a slow connection. "Full quality" opens the original MP4 (1080p; v2 was made at 720p). Both are served by the repo's GitHub Pages site (https://edison9733.github.io/sus_animation/), which the "Video site" GitHub Action (`.github/workflows/video-site.yml`) rebuilds from every branch's MP4 on each push to `main`, making the 720p copies and posters as it goes.
+"Play" opens a light 720p copy (2 to 3.5 MB) in your browser's video player. On a slow connection (under about 60 KB/s), use the 480p link (about 1 MB, needs about 22 KB/s) so it plays without pausing; the all-versions page switches to 480p by itself when it detects a slow connection. "Full quality" opens the original MP4 (1080p; v2 was made at 720p). Both are served by the repo's GitHub Pages site (https://edison9733.github.io/sus_animation/), which the "Video site" GitHub Action (`.github/workflows/video-site.yml`) rebuilds from every branch's MP4 on each push to `main`, making the 720p and 480p copies and the posters as it goes.
 
 This repo holds the pitch animation for **FloodSafe Sanitation Gambella**, a GSC 2026–27 Student Challenge entry (Phase 1, IGNITE). The project is a low-cost kit that upgrades existing pit latrines so they survive floods and droughts. The pilot covers Jikawo, Wantawo and Lare in Gambela, western Ethiopia, plus one refugee camp.
 
@@ -71,7 +71,7 @@ skills/                          agent skills used (see below)
    - Delete the old MP4.
    - Add the new MP4 at the repo root, named `v<N>_<what-it-is-in-one-line>.mp4`: no spaces, words joined with `-`, parts with `_`.
 3. **Update the tables above.**
-   - **Videos table:** add a row with the "Play" link (`https://edison9733.github.io/sus_animation/web/<file>.mp4`, the 720p copy) and the "Full quality" link (`https://edison9733.github.io/sus_animation/<file>.mp4`). Point the old latest row at its new branch, and the "Play the latest" line at the new MP4. Pushing to `main` rebuilds the video site by itself; after adding an MP4 to an older branch only, run the "Video site" Action by hand.
+   - **Videos table:** add a row with the "Play" links (`https://edison9733.github.io/sus_animation/web/<file>.mp4` for 720p and `.../web/480/<file>.mp4` for 480p) and the "Full quality" link (`https://edison9733.github.io/sus_animation/<file>.mp4`). Point the old latest row at its new branch, and the "Play the latest" line at the new MP4. Pushing to `main` rebuilds the video site by itself; after adding an MP4 to an older branch only, run the "Video site" Action by hand.
    - **Branch table:** add a row for the new version and move "(latest)". Keep one line per branch.
 4. Commit and push both branches.
 

@@ -35,13 +35,16 @@ jobs:
       - name: Make a light 720p copy and a poster of each video (the page plays these, so it starts fast on slow links)
         run: |
           command -v ffmpeg || { sudo apt-get update -q && sudo apt-get install -y -q ffmpeg; }
-          mkdir -p _site/web
+          mkdir -p _site/web/480
           cut -f2 _site/videos.tsv | while read -r f; do
             ffmpeg -nostdin -y -loglevel error -i "_site/$f" -vf "fps=30,scale=-2:720:flags=lanczos" -c:v libx264 -preset medium -crf 26 \
               -maxrate 1M -bufsize 2M -pix_fmt yuv420p -c:a aac -b:a 96k -movflags +faststart "_site/web/$f"
+            # 480p for slow connections: about 180 kbit/s (22 KB/s), so it plays without pausing on a 25 KB/s link
+            ffmpeg -nostdin -y -loglevel error -i "_site/$f" -vf "fps=30,scale=-2:480:flags=lanczos" -c:v libx264 -preset slow -tune animation -crf 30 \
+              -maxrate 140k -bufsize 280k -pix_fmt yuv420p -c:a aac -b:a 40k -ac 2 -movflags +faststart "_site/web/480/$f"
             ffmpeg -nostdin -y -loglevel error -ss 3.5 -i "_site/$f" -frames:v 1 -vf "scale=-2:720" -q:v 4 "_site/web/${f%.mp4}.jpg"
           done
-          ls -la _site/web
+          ls -la _site/web _site/web/480
           python3 .github/pages/build_site.py _site
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
