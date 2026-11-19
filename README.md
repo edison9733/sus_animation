@@ -2,16 +2,18 @@
 
 ## 📌 Videos (MP4)
 
-**Latest: [⬇ v3.1, 48.5 s, with the Anatomy gauge scene (MP4, 17.7 MB)](https://github.com/edison9733/sus_animation/raw/main/v3.1_FloodSafe-Gambella_48s_teardown-film-with-anatomy-gauge-scene.mp4)**
+**▶ [Play the latest: v3.1, 48.5 s, with the Anatomy gauge scene](https://edison9733.github.io/sus_animation/v3.1_FloodSafe-Gambella_48s_teardown-film-with-anatomy-gauge-scene.mp4)**
 
-| Version | MP4 (click to download) | File page on GitHub | Branch |
+**▶ [All versions on one page](https://edison9733.github.io/sus_animation/)**
+
+| Version | ▶ Play in the browser | Download | Branch |
 |---|---|---|---|
-| **v3.1 (latest)** | [⬇ v3.1_FloodSafe-Gambella_48s_teardown-film-with-anatomy-gauge-scene.mp4](https://github.com/edison9733/sus_animation/raw/main/v3.1_FloodSafe-Gambella_48s_teardown-film-with-anatomy-gauge-scene.mp4) (17.7 MB) | [open](https://github.com/edison9733/sus_animation/blob/main/v3.1_FloodSafe-Gambella_48s_teardown-film-with-anatomy-gauge-scene.mp4) | `main` |
-| v3 | [⬇ v3_FloodSafe-Gambella_48s_teardown-cutaway-on-team-maps-and-data.mp4](https://github.com/edison9733/sus_animation/raw/v3-gambella-data-48s/v3_FloodSafe-Gambella_48s_teardown-cutaway-on-team-maps-and-data.mp4) (46.5 MB) | [open](https://github.com/edison9733/sus_animation/blob/v3-gambella-data-48s/v3_FloodSafe-Gambella_48s_teardown-cutaway-on-team-maps-and-data.mp4) | `v3-gambella-data-48s` |
-| v2 | [⬇ v2_FloodSafe_30s_teardown-turntable-cutaway-global-figures.mp4](https://github.com/edison9733/sus_animation/raw/v2-teardown-turntable-30s/v2_FloodSafe_30s_teardown-turntable-cutaway-global-figures.mp4) (17.9 MB) | [open](https://github.com/edison9733/sus_animation/blob/v2-teardown-turntable-30s/v2_FloodSafe_30s_teardown-turntable-cutaway-global-figures.mp4) | `v2-teardown-turntable-30s` |
+| **v3.1 (latest)** | [▶ v3.1_FloodSafe-Gambella_48s_teardown-film-with-anatomy-gauge-scene.mp4](https://edison9733.github.io/sus_animation/v3.1_FloodSafe-Gambella_48s_teardown-film-with-anatomy-gauge-scene.mp4) | [⬇ 17.7 MB](https://github.com/edison9733/sus_animation/raw/main/v3.1_FloodSafe-Gambella_48s_teardown-film-with-anatomy-gauge-scene.mp4) | `main` |
+| v3 | [▶ v3_FloodSafe-Gambella_48s_teardown-cutaway-on-team-maps-and-data.mp4](https://edison9733.github.io/sus_animation/v3_FloodSafe-Gambella_48s_teardown-cutaway-on-team-maps-and-data.mp4) | [⬇ 46.5 MB](https://github.com/edison9733/sus_animation/raw/v3-gambella-data-48s/v3_FloodSafe-Gambella_48s_teardown-cutaway-on-team-maps-and-data.mp4) | `v3-gambella-data-48s` |
+| v2 | [▶ v2_FloodSafe_30s_teardown-turntable-cutaway-global-figures.mp4](https://edison9733.github.io/sus_animation/v2_FloodSafe_30s_teardown-turntable-cutaway-global-figures.mp4) | [⬇ 17.9 MB](https://github.com/edison9733/sus_animation/raw/v2-teardown-turntable-30s/v2_FloodSafe_30s_teardown-turntable-cutaway-global-figures.mp4) | `v2-teardown-turntable-30s` |
 | v1 | `v1_FloodSafe_30s_flat-2D-ground-cutaway-deck-colours.mp4` (missing, no export found) | — | `v1-flat-2d-cutaway-30s` |
 
-Each MP4 link downloads the video, so it plays on your computer. GitHub cannot play a video stored in a repo inside its own page: the "open" page only shows the file and a "View raw" button.
+"Play" opens the MP4 in your browser's video player. The videos are served by the repo's GitHub Pages site (https://edison9733.github.io/sus_animation/), which the "Video site" GitHub Action (`.github/workflows/video-site.yml`) rebuilds from every branch's MP4 on each push to `main`. "Download" saves the file from the repo itself.
 
 This repo holds the pitch animation for **FloodSafe Sanitation Gambella**, a GSC 2026–27 Student Challenge entry (Phase 1, IGNITE). The project is a low-cost kit that upgrades existing pit latrines so they survive floods and droughts. The pilot covers Jikawo, Wantawo and Lare in Gambela, western Ethiopia, plus one refugee camp.
 
@@ -35,6 +37,7 @@ The repo has two parts: the **context** (what the film is about and where every 
 ```
 v3.1_…anatomy-gauge-scene.mp4    the latest film (48.5 s, 1920×1080, 60 fps)
 CLAUDE.md                        the repo rules, written for Claude (and for people)
+.github/                         the "Video site" Action that publishes every MP4 to GitHub Pages
 context/                         PART 1: context
   HANDOFF_README.md              full handoff: scenes, timings, where each figure comes from
   voiceover/                     ElevenLabs script, clip timings (clips.csv), voice-clone reading text
@@ -68,7 +71,7 @@ skills/                          agent skills used (see below)
    - Delete the old MP4.
    - Add the new MP4 at the repo root, named `v<N>_<what-it-is-in-one-line>.mp4`: no spaces, words joined with `-`, parts with `_`.
 3. **Update the tables above.**
-   - **Videos table:** add a row with the MP4 link (`https://github.com/edison9733/sus_animation/raw/<branch>/<file>.mp4`) and the file page link (`.../blob/<branch>/<file>.mp4`). Point the old latest row at its new branch, and the "Latest" line at the new MP4 on `main`.
+   - **Videos table:** add a row with the "Play" link (`https://edison9733.github.io/sus_animation/<file>.mp4`) and the "Download" link (`https://github.com/edison9733/sus_animation/raw/<branch>/<file>.mp4`). Point the old latest row at its new branch, and the "Play the latest" line at the new MP4. Pushing to `main` rebuilds the video site by itself; after adding an MP4 to an older branch only, run the "Video site" Action by hand.
    - **Branch table:** add a row for the new version and move "(latest)". Keep one line per branch.
 4. Commit and push both branches.
 

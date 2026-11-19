@@ -1,0 +1,48 @@
+# Builds the video site (https://edison9733.github.io/sus_animation/): one page that plays every version's MP4.
+# It takes the MP4 at the root of every branch, so each video is stored once, on its own branch.
+# Runs on every push to main. After adding an MP4 to an older branch only, run it by hand (Actions → Video site → Run workflow).
+name: Video site
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Collect the MP4 from every branch
+        run: |
+          mkdir -p _site
+          : > _site/videos.tsv
+          for b in $(git for-each-ref --format='%(refname:strip=3)' refs/remotes/origin | grep -vx HEAD); do
+            git ls-tree --name-only "origin/$b" | grep -E '\.mp4$' | while read -r f; do
+              git show "origin/$b:$f" > "_site/$f"
+              printf '%s\t%s\t%s\n' "$b" "$f" "$(git log -1 --format=%cs "origin/$b")" >> _site/videos.tsv
+            done
+          done
+          cat _site/videos.tsv
+          python3 .github/pages/build_site.py _site
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4
