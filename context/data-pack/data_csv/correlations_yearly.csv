@@ -1,0 +1,35 @@
+﻿sample,var_x,var_y,n,spearman,p,derived
+1981-2025,annual_mm,gam_flood_record,45,0.62,5.54e-06,yes
+1981-2025,annual_mm,gam_drought_record,45,-0.161,0.29,yes
+1981-2025,annual_mm,eth_flood_events,45,0.122,0.426,yes
+1981-2025,annual_mm,eth_drought_events,45,-0.065,0.67,yes
+1981-2025,jjas_mm,gam_flood_record,45,0.423,0.00382,yes
+1981-2025,jjas_mm,gam_drought_record,45,-0.146,0.339,yes
+1981-2025,jjas_mm,eth_flood_events,45,0.051,0.741,yes
+1981-2025,jjas_mm,eth_drought_events,45,-0.051,0.74,yes
+1981-2025,spi_jja,gam_flood_record,45,0.288,0.0555,yes
+1981-2025,spi_jja,gam_drought_record,45,0.025,0.87,yes
+1981-2025,spi_jja,eth_flood_events,45,0.09,0.558,yes
+1981-2025,spi_jja,eth_drought_events,45,-0.091,0.553,yes
+1981-2025,spei12_dec_mean,gam_flood_record,44,0.555,9.35e-05,yes
+1981-2025,spei12_dec_mean,gam_drought_record,44,-0.104,0.5,yes
+1981-2025,spei12_dec_mean,eth_flood_events,44,-0.133,0.389,yes
+1981-2025,spei12_dec_mean,eth_drought_events,44,-0.126,0.413,yes
+2006-2025 (denser records),annual_mm,gam_flood_record,20,0.536,0.0148,yes
+2006-2025 (denser records),annual_mm,gam_drought_record,20,-0.029,0.904,yes
+2006-2025 (denser records),annual_mm,eth_flood_events,20,0.057,0.813,yes
+2006-2025 (denser records),annual_mm,eth_drought_events,20,-0.155,0.515,yes
+2006-2025 (denser records),jjas_mm,gam_flood_record,20,0.427,0.0603,yes
+2006-2025 (denser records),jjas_mm,gam_drought_record,20,0.029,0.904,yes
+2006-2025 (denser records),jjas_mm,eth_flood_events,20,0.005,0.984,yes
+2006-2025 (denser records),jjas_mm,eth_drought_events,20,-0.064,0.79,yes
+2006-2025 (denser records),spi_jja,gam_flood_record,20,0.3,0.199,yes
+2006-2025 (denser records),spi_jja,gam_drought_record,20,0.231,0.327,yes
+2006-2025 (denser records),spi_jja,eth_flood_events,20,0.104,0.664,yes
+2006-2025 (denser records),spi_jja,eth_drought_events,20,-0.136,0.567,yes
+2006-2025 (denser records),spei12_dec_mean,gam_flood_record,20,0.518,0.0193,yes
+2006-2025 (denser records),spei12_dec_mean,gam_drought_record,20,-0.058,0.809,yes
+2006-2025 (denser records),spei12_dec_mean,eth_flood_events,20,-0.254,0.279,yes
+2006-2025 (denser records),spei12_dec_mean,eth_drought_events,20,-0.155,0.515,yes
+1981-2025,year,gam_flood_record,45,0.443,0.00228,yes
+1981-2025,year,annual_mm,45,0.494,0.000562,yes

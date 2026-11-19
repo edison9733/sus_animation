@@ -1,0 +1,93 @@
+{
+  "v": 1,
+  "stage": "final",
+  "look": "Teardown console: the family yard as a simple 3D block cut open on a turntable, inside a window card on a dotted cream ground; a readout panel on the left, live gauges on the right, one big caption under the card. Flat-shaded boxes with thin ink outlines, one accent for the part doing the work. Plain and lively: the camera orbits and pushes in to close-ups of the pit, the well, each kit part and the gauge; the team's own Gambela maps fill the same window. One water-level input drives the model, the gauge and the panels. Every figure comes from the team's Gambella data pack.",
+  "palettes": [
+    [
+      "#F1ECE2",
+      "#2669A6",
+      "#13283F",
+      "#C24A33"
+    ],
+    [
+      "#F6F1E8",
+      "#A8361A",
+      "#1F1A16",
+      "#1F5A98"
+    ],
+    [
+      "#0E2233",
+      "#4FA3C7",
+      "#EAF2F5",
+      "#E8B04A"
+    ],
+    [
+      "#1D3B2F",
+      "#E3A74A",
+      "#F3EEDF",
+      "#6FB7C9"
+    ]
+  ],
+  "theirs": 1,
+  "width": 1920,
+  "height": 1080,
+  "fps": 60,
+  "background": "#F1ECE2",
+  "fonts": {
+    "display": "space-grotesk",
+    "sans": {
+      "family": "Inter",
+      "or": "instrument-sans"
+    }
+  },
+  "scenes": [
+    {
+      "id": "yard",
+      "name": "The yard",
+      "dur": 4.5,
+      "desc": "The yard as a 3D block cut open turns on its table: latrine over its pit, a shallow well; 47% open defecation counts up, labels pop, then the camera pushes in."
+    },
+    {
+      "id": "map",
+      "name": "The flood plain",
+      "dur": 6,
+      "desc": "The team's Gambela priority map fills the window; the camera pushes onto the dark red north-west and a ring is drawn round Jikawo, Wantawo and Lare."
+    },
+    {
+      "id": "flood",
+      "name": "The flood",
+      "dur": 6.5,
+      "desc": "Rain; close on the pit as floodwater and groundwater rise and it overflows, then the camera follows the waste through the soil to the well while 185,200 displaced and 2,194 cholera cases count up."
+    },
+    {
+      "id": "cutoff",
+      "name": "Why pits fail",
+      "dur": 5.5,
+      "desc": "Wide again, the block turning back: four red labels land on the hut, the well, the pit and the clay."
+    },
+    {
+      "id": "zones",
+      "name": "Four designs",
+      "dur": 6.5,
+      "desc": "The team's toilet-zone map fills the window while zones A to D and the people in each are listed."
+    },
+    {
+      "id": "kit",
+      "name": "The kit",
+      "dur": 7.5,
+      "desc": "The latrine is rebuilt part by part in close-up: lining rings drop in, the slab rises, the lid slides in, then back for the vent, the solar light and the emergency pack."
+    },
+    {
+      "id": "signal",
+      "name": "The signal",
+      "dur": 5.5,
+      "desc": "Close on the gauge as its float climbs through green, yellow and red with the groundwater; the camera pulls back as the lid seals and the emergency pack is marked."
+    },
+    {
+      "id": "ask",
+      "name": "The pilot",
+      "dur": 6.5,
+      "desc": "End card: the finished latrine turns under the name FloodSafe Sanitation Gambella, the 500-household pilot and its estimated cost."
+    }
+  ]
+}

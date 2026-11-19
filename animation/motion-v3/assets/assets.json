@@ -1,0 +1,16 @@
+{
+  "gambella-priority.webp": {
+    "ref": "/_blob/917f62c15686ee619fece450b0fe5242",
+    "mime": "image/webp",
+    "w": 1000,
+    "h": 1010,
+    "from": "global b lablaa/outputs/maps/sanitation_priority.png, left panel, cropped"
+  },
+  "gambella-zones.webp": {
+    "ref": "/_blob/01a73536452e2f72d3e50b174a53c6e8",
+    "mime": "image/webp",
+    "w": 1000,
+    "h": 1015,
+    "from": "global b lablaa/outputs/maps/sanitation_priority.png, right panel, cropped"
+  }
+}

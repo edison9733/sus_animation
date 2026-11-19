@@ -1,0 +1,10 @@
+﻿assumption,value,basis
+Pilot households,500.0,"Assumption: 3 woredas (Jikawo, Wantawo, Lare); 80% zone A, 20% zone B, matching the zone mix there"
+Zone A households,400.0,Assumption
+Zone B households,100.0,Assumption
+People reached (households x 5.8),2900.0,"Household size 5.8 = Ethiopia CLTS sample (Crocker et al. 2021, Table 2); Gambela-specific size not in data pack"
+Shared units in one refugee camp,20.0,Assumption: sex-separated blocks with lock and light
+Masons trained,30.0,Assumption
+Local warning helpers,20.0,Assumption
+Survey households per round (pilot + comparison),1000.0,Assumption: 500 pilot + 500 comparison; baseline and endline
+Exchange rate ETB per USD,161.3,Mid-market 16 Nov 2026 (xe.com and other aggregators); parallel market ~182

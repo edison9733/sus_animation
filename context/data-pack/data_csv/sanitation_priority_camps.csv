@@ -1,0 +1,9 @@
+﻿camp,population,date,woreda_geoboundaries,cell_id,toilet_zone,jrc_rp100_flooded_pct,clay_15_30,derived
+Nguenyiel,110178,2022-06-30,Itang,8.325_34.325,"C: lined pit (clay), low flood",0.0,32.4,yes (zone from grid)
+Tierkidi,69677,2022-06-30,Itang,8.275_34.275,"C: lined pit (clay), low flood",0.3056,33.2,yes (zone from grid)
+Jewi,65901,2022-06-30,Gambela Zuria,8.175_34.725,B: raised slab + lined pit,12.6389,32.9,yes (zone from grid)
+Kule,51343,2022-06-30,Itang,8.275_34.275,"C: lined pit (clay), low flood",0.3056,33.2,yes (zone from grid)
+Pugnido,48731,2022-06-30,Gog,7.625_34.275,B: raised slab + lined pit,31.0278,29.8,yes (zone from grid)
+Okugo,13472,2022-06-30,Dima,6.475_35.125,"C: lined pit (clay), low flood",9.75,38.3,yes (zone from grid)
+Pugnido 2,10343,2022-06-30,Gog,7.675_34.225,"C: lined pit (clay), low flood",0.1389,31.2,yes (zone from grid)
+Akula,1917,2022-06-30,Itang,8.425_34.225,"C: lined pit (clay), low flood",0.6389,36.8,yes (zone from grid)

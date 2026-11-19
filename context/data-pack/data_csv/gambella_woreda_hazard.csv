@@ -1,0 +1,14 @@
+﻿woreda,cells,pop_2020,elev_mean_m,rain_mean_mm,rain_cv_pct,dry_months,years_below80pct_share,spei12_le_m1_share,flood_rp10_area_pct,flood_rp100_area_pct,pop_weighted_flood_rp100_pct,surface_water_area_pct,clay_15_30,dominant_soil,derived
+Abobo,101,32842,526.6,1216,9.9,3.5,2.9,18.4,8.3,9.5,11.3,0.58,32.7,Cambisols,yes
+Akobo,72,49188,405.7,918,11.7,5.02,4.7,14.5,34.5,48.6,53.1,0.91,34.5,Vertisols,yes
+Dima,253,21031,653.6,1378,13.9,2.41,7.8,18.4,2.0,2.4,1.9,0.06,36.3,Cambisols,yes
+Gambela Zuria,110,108360,840.7,1296,8.5,3.48,1.7,18.7,2.3,2.7,10.5,0.41,35.7,Luvisols,yes
+Gambella Wild Life Reserve,16,12454,415.3,907,10.8,5.03,3.2,15.5,48.0,76.4,87.4,0.01,32.3,Vertisols,yes
+Godere,19,77217,1226.4,1610,10.5,1.95,1.3,14.2,1.4,1.4,0.4,0.01,45.9,Cambisols,yes
+Gog,106,35001,469.5,1150,12.1,3.75,5.0,17.4,5.4,6.3,9.2,0.51,32.6,Cambisols,yes
+Itang,72,71925,449.9,974,9.8,4.62,3.1,15.6,13.1,14.9,22.1,1.17,34.7,Vertisols,yes
+Jikawo,35,70800,407.9,850,11.1,5.22,2.8,14.7,73.5,91.3,93.3,1.36,36.4,Vertisols,yes
+Jore,111,19263,413.7,931,11.7,4.8,5.0,15.1,39.9,54.0,58.8,0.58,34.0,Vertisols,yes
+Lare,21,57764,418.8,868,10.5,5.19,2.3,15.2,39.1,47.0,43.1,1.09,36.0,Vertisols,yes
+Mengesh,59,43228,995.8,1578,9.7,1.89,0.9,18.9,0.7,0.7,0.6,0.09,42.4,Cambisols,yes
+Wantawo,27,40475,402.6,864,12.2,5.22,4.7,13.7,65.2,83.3,83.4,2.71,36.7,Vertisols,yes

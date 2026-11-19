@@ -1,0 +1,39 @@
+﻿source,level,name,parent,code,area_km2,note
+geoBoundaries gbOpen ETH 2016,ADM1,Gambela,,75662566B92391245038365,30626.0,area derived: LAEA projection of polygon
+geoBoundaries gbOpen ETH 2016,ADM2,Agnuak,Gambela,57463737B400917035317,23506.7,area derived
+geoBoundaries gbOpen ETH 2016,ADM2,Majang,Gambela,57463737B25474915943822,2332.0,area derived
+geoBoundaries gbOpen ETH 2016,ADM2,Nuer,Gambela,57463737B84329108093360,4787.3,area derived
+geoBoundaries gbOpen ETH 2016,ADM3,Wantawo,Nuer,50319843B4246430903688,891.3,area derived; zone = ADM2 polygon containing woreda representative point
+geoBoundaries gbOpen ETH 2016,ADM3,Akobo,Nuer,50319843B6769769706787,2119.8,area derived; zone = ADM2 polygon containing woreda representative point
+geoBoundaries gbOpen ETH 2016,ADM3,Jikawo,Nuer,50319843B50862585772284,1107.8,area derived; zone = ADM2 polygon containing woreda representative point
+geoBoundaries gbOpen ETH 2016,ADM3,Lare,Nuer,50319843B46726069048822,668.4,area derived; zone = ADM2 polygon containing woreda representative point
+geoBoundaries gbOpen ETH 2016,ADM3,Gambella Wild Life Reserve,Agnuak,50319843B6973797085381,474.6,area derived; zone = ADM2 polygon containing woreda representative point
+geoBoundaries gbOpen ETH 2016,ADM3,Itang,Agnuak,50319843B46100720352375,2200.8,area derived; zone = ADM2 polygon containing woreda representative point
+geoBoundaries gbOpen ETH 2016,ADM3,Gambela Zuria,Agnuak,50319843B820718565028,3362.3,area derived; zone = ADM2 polygon containing woreda representative point
+geoBoundaries gbOpen ETH 2016,ADM3,Jore,Agnuak,50319843B65120628774070,3379.4,area derived; zone = ADM2 polygon containing woreda representative point
+geoBoundaries gbOpen ETH 2016,ADM3,Abobo,Agnuak,50319843B58936164811371,3104.6,area derived; zone = ADM2 polygon containing woreda representative point
+geoBoundaries gbOpen ETH 2016,ADM3,Gog,Agnuak,50319843B2658276524860,3219.8,area derived; zone = ADM2 polygon containing woreda representative point
+geoBoundaries gbOpen ETH 2016,ADM3,Mengesh,Majang,50319843B34506223848364,1745.4,area derived; zone = ADM2 polygon containing woreda representative point
+geoBoundaries gbOpen ETH 2016,ADM3,Godere,Majang,50319843B81911881907696,586.6,area derived; zone = ADM2 polygon containing woreda representative point
+geoBoundaries gbOpen ETH 2016,ADM3,Dima,Agnuak,50319843B22187763944280,7765.1,area derived; zone = ADM2 polygon containing woreda representative point
+OCHA COD-AB ETH (valid_on 2025-01-01),ADM1,Gambela,,ET12,31245.5,area derived (same LAEA); file attribute area_sqkm=31245.6
+comparison,ADM1,Gambela overlap geoBoundaries vs COD-AB,,,30357.8,intersection area; = 99.1% of geoBoundaries polygon and 97.2% of COD-AB polygon (derived)
+OCHA COD-AB ETH (valid_on 2025-01-01),ADM2,Nuwer,Gambela,ET1201,4723.0,area derived (same LAEA); file attribute area_sqkm=4723.0
+OCHA COD-AB ETH (valid_on 2025-01-01),ADM2,Agnewak,Gambela,ET1202,21997.5,area derived (same LAEA); file attribute area_sqkm=21997.5
+OCHA COD-AB ETH (valid_on 2025-01-01),ADM2,Majang,Gambela,ET1203,2326.1,area derived (same LAEA); file attribute area_sqkm=2326.1
+OCHA COD-AB ETH (valid_on 2025-01-01),ADM2,Itang Special,Gambela,ET1204,2198.9,area derived (same LAEA); file attribute area_sqkm=2198.9
+OCHA COD-AB ETH (valid_on 2025-01-01),ADM3,Akobo,Nuwer,ET120101,2141.2,area derived (same LAEA); file attribute area_sqkm=2141.2
+OCHA COD-AB ETH (valid_on 2025-01-01),ADM3,Lare,Nuwer,ET120102,568.4,area derived (same LAEA); file attribute area_sqkm=568.4
+OCHA COD-AB ETH (valid_on 2025-01-01),ADM3,Jikawo,Nuwer,ET120103,662.6,area derived (same LAEA); file attribute area_sqkm=662.6
+OCHA COD-AB ETH (valid_on 2025-01-01),ADM3,Wantawo,Nuwer,ET120104,941.7,area derived (same LAEA); file attribute area_sqkm=941.6
+OCHA COD-AB ETH (valid_on 2025-01-01),ADM3,Makuey,Nuwer,ET120105,409.2,area derived (same LAEA); file attribute area_sqkm=409.2
+OCHA COD-AB ETH (valid_on 2025-01-01),ADM3,Gambela National Park,Agnewak,ET120200,471.9,area derived (same LAEA); file attribute area_sqkm=471.9
+OCHA COD-AB ETH (valid_on 2025-01-01),ADM3,Abobo,Agnewak,ET120201,3141.1,area derived (same LAEA); file attribute area_sqkm=3141.1
+OCHA COD-AB ETH (valid_on 2025-01-01),ADM3,Gambela Zuria,Agnewak,ET120202,3286.8,area derived (same LAEA); file attribute area_sqkm=3286.8
+OCHA COD-AB ETH (valid_on 2025-01-01),ADM3,Gog,Agnewak,ET120203,3236.8,area derived (same LAEA); file attribute area_sqkm=3236.8
+OCHA COD-AB ETH (valid_on 2025-01-01),ADM3,Jore,Agnewak,ET120204,3320.5,area derived (same LAEA); file attribute area_sqkm=3320.5
+OCHA COD-AB ETH (valid_on 2025-01-01),ADM3,Dima (GM),Agnewak,ET120205,8525.0,area derived (same LAEA); file attribute area_sqkm=8525.0
+OCHA COD-AB ETH (valid_on 2025-01-01),ADM3,Gambela town,Agnewak,ET120206,15.5,area derived (same LAEA); file attribute area_sqkm=15.5
+OCHA COD-AB ETH (valid_on 2025-01-01),ADM3,Godere,Majang,ET120301,654.0,area derived (same LAEA); file attribute area_sqkm=654.0
+OCHA COD-AB ETH (valid_on 2025-01-01),ADM3,Mengesh,Majang,ET120308,1672.2,area derived (same LAEA); file attribute area_sqkm=1672.2
+OCHA COD-AB ETH (valid_on 2025-01-01),ADM3,Itang,Itang Special,ET120407,2198.9,area derived (same LAEA); file attribute area_sqkm=2198.9
