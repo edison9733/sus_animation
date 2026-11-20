@@ -79,7 +79,7 @@ All figures are from the Gambella data pack. Do not add numbers without a source
 | v3.2: USD 350 per household, range 200–500 (kit scene) | `budget_estimate.csv`, line 4, zone B raised slab + lined pit, unit cost low / mid / high; labelled "estimate" |
 | v3.2: budget split (pilot scene) | `budget_summary.csv`, mid totals: toilet units (zones A + B) 291k, staff and transport 95k, other activities 73k (lines 1, 2, 5, 6, 8, 9), contingency 49k, gauges and packs 32k; sum 540,280 |
 
-The maps are labelled "own analysis" in the window title bar.
+The maps are labelled "own analysis" in the window title bar. Since v3.2 (20 Nov, update) they are redrawn by `animation/tools/make_scene_maps.py` from the same grid (`sanitation_priority_grid.csv`): the colours are smoothed and cut to the Gambela outline and district borders (geoBoundaries ETH ADM3 2016, `data-pack/data_geo/gambella_adm3.geojson`, the source the team used) instead of square grid cells that cross the borders. Same data, same framing.
 
 ## Next steps
 
@@ -98,4 +98,4 @@ The maps are labelled "own analysis" in the window title bar.
 - **v2 (16 Nov):** restyled after the Instagram reel promoting the "Teardown" Claude Code skill (see research notes). It became a 3D turntable cutaway in a console window, with live gauges and close-ups.
 - **v3 (19 Nov):** rebuilt on the Gambella data pack, with the team's maps, Gambella figures, a new "Why pits fail" scene, a zones scene, a lock and solar light, and a 48.5 s cut with a matching score.
 - **v3.1 (19 Nov):** scene 7 ("The signal") rebuilt as a detailed Anatomy isometric figure and spliced into the v3 export.
-- **v3.2 (20 Nov):** after the team watched v3.1 (feedback: better animation quality, more detailed modelling, narration aligned with better data visualisation). Animated charts in six scenes, a cost figure in the kit scene, a solar panel, vent screen and brick courses on the latrine model, a supersampled export, and `voiceover/NARRATION_v3.2.md`, a 2-minute live narration with three pause points for the team's recording. Timings are unchanged (48.5 s), so the ElevenLabs clips and scene 7 splice still line up. Source: `animation/motion/`.
+- **v3.2 (20 Nov):** after the team watched v3.1 (feedback: better animation quality, more detailed modelling, narration aligned with better data visualisation). Animated charts in six scenes, a cost figure in the kit scene, a solar panel, vent screen and brick courses on the latrine model, a supersampled export, and `voiceover/NARRATION_v3.2.md`, a 2-minute live narration with three pause points for the team's recording. Timings are unchanged (48.5 s), so the ElevenLabs clips and scene 7 splice still line up. Source: `animation/motion/`. Same day, after team review: the two maps redrawn so their colours follow the region and district borders instead of square grid cells (`animation/tools/make_scene_maps.py`).

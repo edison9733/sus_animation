@@ -19,7 +19,7 @@ This repo holds the FloodSafe Sanitation Gambella pitch animation. `README.md` h
 
 | Branch | One-line description |
 |---|---|
-| `main` | v3.2 (latest): data charts in 6 scenes, a more detailed model, a sharper export, a 2-minute narration script |
+| `main` | v3.2 (latest): data charts in 6 scenes, maps coloured to the district borders, a more detailed model, a sharper export, a 2-minute narration script |
 | `v3.1-anatomy-gauge-scene` | v3.1: v3 with scene 7 rebuilt as an Anatomy isometric gauge figure |
 | `v3-gambella-data-48s` | v3: 48.5 s rebuild on the Gambella data pack, team maps, 8 scenes |
 | `v2-teardown-turntable-30s` | v2: 30 s 3D turntable cutaway in a console window, global figures |

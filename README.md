@@ -8,7 +8,7 @@
 
 | Version | ▶ Play in the browser (720p, or 480p for a slow connection) | Full quality (original MP4) | Branch |
 |---|---|---|---|
-| **v3.2 (latest)** | [▶ v3.2_FloodSafe-Gambella_48s_charts-narration-ready-anatomy-gauge.mp4](https://edison9733.github.io/sus_animation/web/v3.2_FloodSafe-Gambella_48s_charts-narration-ready-anatomy-gauge.mp4) · [▶ 480p, 1.0 MB](https://edison9733.github.io/sus_animation/web/480/v3.2_FloodSafe-Gambella_48s_charts-narration-ready-anatomy-gauge.mp4) | [⬇ 1080p, 16.8 MB](https://edison9733.github.io/sus_animation/v3.2_FloodSafe-Gambella_48s_charts-narration-ready-anatomy-gauge.mp4) | `main` |
+| **v3.2 (latest)** | [▶ v3.2_FloodSafe-Gambella_48s_charts-narration-ready-anatomy-gauge.mp4](https://edison9733.github.io/sus_animation/web/v3.2_FloodSafe-Gambella_48s_charts-narration-ready-anatomy-gauge.mp4) · [▶ 480p, 1.0 MB](https://edison9733.github.io/sus_animation/web/480/v3.2_FloodSafe-Gambella_48s_charts-narration-ready-anatomy-gauge.mp4) | [⬇ 1080p, 18.3 MB](https://edison9733.github.io/sus_animation/v3.2_FloodSafe-Gambella_48s_charts-narration-ready-anatomy-gauge.mp4) | `main` |
 | v3.1 | [▶ v3.1_FloodSafe-Gambella_48s_teardown-film-with-anatomy-gauge-scene.mp4](https://edison9733.github.io/sus_animation/web/v3.1_FloodSafe-Gambella_48s_teardown-film-with-anatomy-gauge-scene.mp4) · [▶ 480p, 1.0 MB](https://edison9733.github.io/sus_animation/web/480/v3.1_FloodSafe-Gambella_48s_teardown-film-with-anatomy-gauge-scene.mp4) | [⬇ 1080p, 17.7 MB](https://edison9733.github.io/sus_animation/v3.1_FloodSafe-Gambella_48s_teardown-film-with-anatomy-gauge-scene.mp4) | `v3.1-anatomy-gauge-scene` |
 | v3 | [▶ v3_FloodSafe-Gambella_48s_teardown-cutaway-on-team-maps-and-data.mp4](https://edison9733.github.io/sus_animation/web/v3_FloodSafe-Gambella_48s_teardown-cutaway-on-team-maps-and-data.mp4) · [▶ 480p, 1.1 MB](https://edison9733.github.io/sus_animation/web/480/v3_FloodSafe-Gambella_48s_teardown-cutaway-on-team-maps-and-data.mp4) | [⬇ 1080p, 46.5 MB](https://edison9733.github.io/sus_animation/v3_FloodSafe-Gambella_48s_teardown-cutaway-on-team-maps-and-data.mp4) | `v3-gambella-data-48s` |
 | v2 | [▶ v2_FloodSafe_30s_teardown-turntable-cutaway-global-figures.mp4](https://edison9733.github.io/sus_animation/web/v2_FloodSafe_30s_teardown-turntable-cutaway-global-figures.mp4) · [▶ 480p, 0.7 MB](https://edison9733.github.io/sus_animation/web/480/v2_FloodSafe_30s_teardown-turntable-cutaway-global-figures.mp4) | [⬇ 720p, 17.9 MB](https://edison9733.github.io/sus_animation/v2_FloodSafe_30s_teardown-turntable-cutaway-global-figures.mp4) | `v2-teardown-turntable-30s` |
@@ -24,7 +24,7 @@ This repo holds the pitch animation for **FloodSafe Sanitation Gambella**, a GSC
 
 | Branch | Version | Date | MP4 on that branch | One-line description |
 |---|---|---|---|---|
-| [`main`](../../tree/main) | **v3.2 (latest)** | 20 Nov 2026 | `v3.2_FloodSafe-Gambella_48s_charts-narration-ready-anatomy-gauge.mp4` | v3.1 after team feedback: animated data charts in 6 scenes, a more detailed latrine model, a sharper export, and a 2-minute narration script with pause points |
+| [`main`](../../tree/main) | **v3.2 (latest)** | 20 Nov 2026 | `v3.2_FloodSafe-Gambella_48s_charts-narration-ready-anatomy-gauge.mp4` | v3.1 after team feedback: animated data charts in 6 scenes, maps whose colours follow the district borders, a more detailed latrine model, a sharper export, and a 2-minute narration script with pause points |
 | [`v3.1-anatomy-gauge-scene`](../../tree/v3.1-anatomy-gauge-scene) | v3.1 | 19 Nov 2026 | `v3.1_FloodSafe-Gambella_48s_teardown-film-with-anatomy-gauge-scene.mp4` | v3 with scene 7 ("The signal") rebuilt as an Anatomy isometric gauge figure |
 | [`v3-gambella-data-48s`](../../tree/v3-gambella-data-48s) | v3 | 19 Nov 2026 | `v3_FloodSafe-Gambella_48s_teardown-cutaway-on-team-maps-and-data.mp4` | 48.5 s rebuild on the Gambella data pack: team maps, Gambella figures, 8 scenes |
 | [`v2-teardown-turntable-30s`](../../tree/v2-teardown-turntable-30s) | v2 | 16 Nov 2026 | `v2_FloodSafe_30s_teardown-turntable-cutaway-global-figures.mp4` | 30 s 3D turntable cutaway in a console window, with global figures |
@@ -45,12 +45,14 @@ context/                         PART 1: context
   voiceover/                     NARRATION_v3.2.md (2-minute live narration with pause points), ElevenLabs script, clip timings
   team-source/                   team draft v2 (.docx) and two deck slides (PNG)
   research/                      notes on the Teardown skill (the v2/v3 style reference)
-  data-pack/                     the Gambella data pack: CSVs, maps, proposal PDF, deck PPTX, report, scripts, session log
+  data-pack/                     the Gambella data pack: CSVs, maps, proposal PDF, deck PPTX, report, scripts, session log;
+                                 data_geo/ holds the Gambela district borders (geoBoundaries) used to draw the film's maps
 animation/                       PART 2: animation
   motion/                        source of the Motion film, now v3.2 (scene modules, CSS, score, assets)
   anatomy-scene7/                scene 7 rebuilt with the Anatomy skill, plus its build, render and splice scripts
   tools/merge_voiceover.sh       merges the 8 voice clips into the film at the scene starts
   tools/motion-export.mjs        exports a Motion film to MP4 from Claude Code, with the player's own exporter
+  tools/make_scene_maps.py       draws the two map images (scenes 2 and 5) with colours cut to the district borders
 skills/                          agent skills used (see below)
   anatomy/                       copy of the Anatomy skill (MIT)
 ```

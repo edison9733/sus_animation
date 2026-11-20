@@ -2,15 +2,15 @@
   "gambella-priority.webp": {
     "ref": "/_blob/917f62c15686ee619fece450b0fe5242",
     "mime": "image/webp",
-    "w": 1000,
-    "h": 1010,
-    "from": "global b lablaa/outputs/maps/sanitation_priority.png, left panel, cropped"
+    "w": 2000,
+    "h": 2020,
+    "from": "animation/tools/make_scene_maps.py: sanitation_priority_grid.csv (priority) smoothed and cut to the geoBoundaries Gambela outline, same framing as the team map (sanitation_priority.png, left panel), 2x size"
   },
   "gambella-zones.webp": {
     "ref": "/_blob/01a73536452e2f72d3e50b174a53c6e8",
     "mime": "image/webp",
-    "w": 1000,
-    "h": 1015,
-    "from": "global b lablaa/outputs/maps/sanitation_priority.png, right panel, cropped"
+    "w": 2000,
+    "h": 2030,
+    "from": "animation/tools/make_scene_maps.py: sanitation_priority_grid.csv (toilet_zone) smoothed and cut to the geoBoundaries Gambela outline, same framing as the team map (sanitation_priority.png, right panel), 2x size"
   }
 }
