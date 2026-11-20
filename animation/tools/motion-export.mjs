@@ -1,11 +1,12 @@
 // Export a Motion film to MP4 from Claude Code, with the Motion player's own exporter (the code behind its Export button).
 // Set up a film folder first (nothing of the player is kept in this repo, because it belongs to the Claude app):
 //   index.html, artifact-type/app.js, artifact-type/app.css   read from the film with the Artifact tool (action "read", path)
-//   cut.js (= animation/motion-v3/film_script.js), modules/ (the scene modules), assets/ (the images, plus the Inter font as Inter.woff2)
+//   cut.js (= animation/motion/film_script.js), modules/ (the scene modules), assets/ (the images, plus the Inter font as Inter.woff2)
 // Then:
 // Drives the player's headless entry (index.html#tools → window.__animation) in headless Chrome:
 // node motion-export.mjs <filmDir> stills 0.8,20,40   → PNGs from the film's renderer, into <outDir>
 // node motion-export.mjs <filmDir> export <out.mp4>   → exportFilm(): the same encoder the Export button runs
+// MOTION_SUPERSAMPLE=1 renders each frame at twice the size and scales it down: smoother edges and text, slower.
 // The page gets no network: every host resolves to nothing and all traffic goes to a dead proxy.
 import { spawn } from "node:child_process";
 import { mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
@@ -65,7 +66,7 @@ try {
     }
   } else if (verb === "export") {
     console.log("estimate", JSON.stringify(await ev("JSON.stringify(window.__animation.estimateExport({ height: 1080, fps: 60, quality: 'high' }))", true)));
-    await ev(`window.__prog = null; window.__done = window.__animation.exportFilm({ title: 'film', height: 1080, fps: 60, quality: 'high',
+    await ev(`window.__prog = null; window.__done = window.__animation.exportFilm({ title: 'film', height: 1080, fps: 60, quality: 'high', supersample: ${process.env.MOTION_SUPERSAMPLE === '1'},
       onProgress: (d, t, p) => { window.__prog = [d, t, p]; } }).then(r => (window.__res = r), e => (window.__res = { error: String(e && e.stack || e) })); 0`);
     let last = "";
     for (;;) { await sleep(2000);

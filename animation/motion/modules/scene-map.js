@@ -28,10 +28,11 @@ kit.scene('map', {
       img: 'gambella-priority.webp', w: 1000, h: 1010, file: 'Gambela region · sanitation priority (own analysis)',
       over: '<svg viewBox="0 0 1000 1010" style="position:absolute;inset:0;width:100%;height:100%;overflow:visible"><ellipse class="map-ring" cx="300" cy="200" rx="235" ry="112" pathLength="1" style="fill:none;stroke:var(--second);stroke-width:5;stroke-dasharray:1 1"/></svg>',
       tags: '<div class="td-tag map-tg">Start here: Jikawo, Wantawo, Lare</div>',
-      left: '<p class="td-k">Flood risk</p><p class="td-big map-n">50%</p><p class="td-s">of residents live where a 100-year river flood reaches</p>',
+      left: '<p class="td-k">Flood risk</p><p class="td-big map-n">50%</p><p class="td-s">of residents live where a 100-year river flood reaches</p>' +
+        '<p class="td-ck">1 dot = 5% of residents</p>' + W.dotsHtml('map-d', 20, 10),
       caps: '<div class="words td-cap"><h2 class="td-capline map-cap">Most people live on a plain that floods</h2></div>',
     });
-    Object.assign(this, { ring: M.q('.map-ring'), tg: M.q('.map-tg'), n: M.q('.map-n'), cap: M.q('.map-cap') });
+    Object.assign(this, { dots: M.all('.map-d'), ring: M.q('.map-ring'), tg: M.q('.map-tg'), n: M.q('.map-n'), cap: M.q('.map-cap') });
     // the whole region, then a push onto the dark red north-west, where the first phase goes
     this.keys = [[0, 0, 520, 505, 0.74], [1.4, 3.0, 300, 230, 1.75]];
   },
@@ -42,6 +43,7 @@ kit.scene('map', {
     this.tg.style.opacity = Math.min(1, a * 3).toFixed(3);
     this.tg.style.transform = 'translate(' + (p[0] - 165).toFixed(1) + 'px,' + (p[1] - 120).toFixed(1) + 'px) scale(' + a.toFixed(3) + ')';
     this.n.textContent = Math.round(lerp(25, 50, eo(seg(t, 0.3, 1.4)))) + '%';
+    W.grow(kit, this.dots, t, 0.4, 0.05, 'd');
     TextFx.fadeFromRight(this.cap, t, 0.2);
   },
 });

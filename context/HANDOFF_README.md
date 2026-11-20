@@ -72,6 +72,12 @@ All figures are from the Gambella data pack. Do not add numbers without a source
 | 97.2% of on-site toilets never emptied | DHS 2024 |
 | Zone people counts | Own zone rules (`sanitation_priority_woredas.csv`) |
 | 500 households, ~2,900 people, USD 540k | Team assumptions and own estimate (`budget_*.csv`), range 333k–818k; labelled "estimated" |
+| v3.2: Ethiopia 27% open defecation (yard chart) | DHS 2024-25, population practising open defecation, Ethiopia 27.2% (`gambella_economy_sanitation.csv`) |
+| v3.2: people displaced by floods per year, 2019–2025 (flood chart) | `gambella_flood_drought_yearly.csv`, column `flood_displaced`: 11,128 · 18,819 · 11,749 · 185,200 · 25,140 · 41,060 · 35,410 |
+| v3.2: never emptied, Gambela 97% vs Ethiopia 89% (problem chart) | DHS 2024-25: 97.2% and 89.4% (`gambella_economy_sanitation.csv`) |
+| v3.2: people in each zone as bars (zones chart) | Same zone counts as above (`sanitation_priority_woredas.csv`) |
+| v3.2: USD 350 per household, range 200–500 (kit scene) | `budget_estimate.csv`, line 4, zone B raised slab + lined pit, unit cost low / mid / high; labelled "estimate" |
+| v3.2: budget split (pilot scene) | `budget_summary.csv`, mid totals: toilet units (zones A + B) 291k, staff and transport 95k, other activities 73k (lines 1, 2, 5, 6, 8, 9), contingency 49k, gauges and packs 32k; sum 540,280 |
 
 The maps are labelled "own analysis" in the window title bar.
 
@@ -91,4 +97,5 @@ The maps are labelled "own analysis" in the window title bar.
 - **v1 (13 Nov):** a 30 s flat 2D "ground cutaway" in the FloodSafe deck colours (cream #F1ECE2, river blue #2669A6, navy #13283F, brick red #C24A33), built from draft v2 and two slides.
 - **v2 (16 Nov):** restyled after the Instagram reel promoting the "Teardown" Claude Code skill (see research notes). It became a 3D turntable cutaway in a console window, with live gauges and close-ups.
 - **v3 (19 Nov):** rebuilt on the Gambella data pack, with the team's maps, Gambella figures, a new "Why pits fail" scene, a zones scene, a lock and solar light, and a 48.5 s cut with a matching score.
-- **Not yet verified:** nobody has watched v3 play back. Check each scene for overlapping labels; the label offsets in `scene-cutoff.js` and `scene-kit.js` are the likeliest to need nudging.
+- **v3.1 (19 Nov):** scene 7 ("The signal") rebuilt as a detailed Anatomy isometric figure and spliced into the v3 export.
+- **v3.2 (20 Nov):** after the team watched v3.1 (feedback: better animation quality, more detailed modelling, narration aligned with better data visualisation). Animated charts in six scenes, a cost figure in the kit scene, a solar panel, vent screen and brick courses on the latrine model, a supersampled export, and `voiceover/NARRATION_v3.2.md`, a 2-minute live narration with three pause points for the team's recording. Timings are unchanged (48.5 s), so the ElevenLabs clips and scene 7 splice still line up. Source: `animation/motion/`.

@@ -170,6 +170,9 @@ Object.assign(window.W, {
     for (let i = 0; i < 5; i++) rings += '<g class="' + P + '-ring">' + R('', -346, i * 50, 16, 48, 'fill:var(--block);' + ink) + R('', -170, i * 50, 16, 48, 'fill:var(--blockdk);' + ink) + '</g>';
     for (let x = -364; x < -140; x += 46) course += 'M' + x + ' -46 V-23 M' + (x + 23) + ' -23 V0 ';
     for (let y = -42; y > -220; y -= 28) bricks += 'M-350 ' + y + ' H-150 ';
+    // v3.2 detail: brick courses on the side walls, and joints between the blocks
+    let side = '';
+    for (let y = -14, i = 0; y > -220; y -= 28, i++) { if (y < -14) side += 'M0 ' + y + ' H100 '; for (let z = i % 2 ? 16 : 33; z < 100; z += 34) side += 'M' + z + ' ' + y + ' v-' + Math.min(28, 220 + y) + ' '; }
     const markup = '<defs><pattern id="' + P + '-gr" width="46" height="34" patternUnits="userSpaceOnUse"><circle cx="8" cy="9" r="2.6" style="fill:var(--shade)"/><circle cx="31" cy="24" r="2" style="fill:var(--shade)"/><circle cx="38" cy="6" r="1.4" style="fill:var(--shade)"/></pattern>' +
       '<clipPath id="' + P + '-tc"><rect x="-500" y="-240" width="1000" height="240"/></clipPath></defs>' +
       // 1 the block of ground: top, right side, and the cut face with the pit, the gauge pipe and the well in section
@@ -200,11 +203,16 @@ Object.assign(window.W, {
       B(-398, -368, 160, 206, -58, -22, pl, 'pack') + B(-401, -365, 206, 214, -61, -19, 'var(--main)', 'pack') +
       B(-350, -150, 14, 220, -100, -90, 'var(--block)', 'hut', 'f') + F('z', -90, 'hut', '<path d="' + bricks + '" style="fill:none;' + ink + '"/>') +
       F('z', -89, 'lamp', '<circle cx="-250" cy="-193" r="48" style="fill:#E8B04A;opacity:.3"/>') + B(-262, -238, 186, 200, -90, -82, '#E8B04A', 'lamp') +
-      B(-350, -340, 14, 220, -90, 0, 'var(--block)', 'hut', 'fs') +
+      B(-350, -340, 14, 220, -90, 0, 'var(--block)', 'hut', 'fs') + F('x', -340, 'hut', '<path d="' + side + '" style="fill:none;opacity:.45;' + ink + '"/>') +
       B(-288, -212, 14, 22, -64, 0, 'var(--main)', 'lid') +
-      B(-160, -150, 14, 220, -100, 0, 'var(--block)', 'hut', 'fs') +
+      B(-160, -150, 14, 220, -100, 0, 'var(--block)', 'hut', 'fs') + F('x', -150, 'hut', '<path d="' + side + '" style="fill:none;opacity:.55;' + ink + '"/>') +
       B(-364, -136, 220, 234, -114, 0, 'color-mix(in srgb, var(--main) 45%, var(--block))', 'hut') +
+      // v3.2 detail: the solar panel that feeds the light, on two rails, with its cell grid
+      B(-326, -322, 234, 238, -98, -26, 'var(--blockdk)', 'sol') + B(-244, -240, 234, 238, -98, -26, 'var(--blockdk)', 'sol') +
+      B(-332, -234, 238, 243, -102, -22, '#2B4A6F', 'sol') +
+      F('y', 243, 'sol', '<path d="M-307.5 -102 V-22 M-283 -102 V-22 M-258.5 -102 V-22 M-332 -75.3 H-234 M-332 -48.7 H-234" style="stroke:#9CC3E6;stroke-width:1.5;vector-effect:non-scaling-stroke;fill:none"/>') +
       B(-132, -116, 14, 330, -100, -84, 'var(--blockdk)', 'vent', 'fs') + B(-136, -112, 330, 350, -104, -80, 'var(--second)', 'vent') +
+      F('z', -80, 'vent', '<path d="M-132 -348 V-332 M-128 -348 V-332 M-124 -348 V-332 M-120 -348 V-332 M-116 -348 V-332 M-134 -344 H-114 M-134 -340 H-114 M-134 -336 H-114" style="stroke:var(--ground);stroke-width:1;vector-effect:non-scaling-stroke;fill:none;opacity:.8"/>') +
       wbox(-136, -95) + F('y', 0, 'wt', R(P + '-w', -95, -100, 30, 70, wt)) +
       B(-95, -65, 0, 250, -30, 0, pale, '') + F('z', 0, '', R('', -91, -124, 22, 60, 'fill:#3E8F5A') + R('', -91, -184, 22, 60, 'fill:#E8B04A') + R('', -91, -244, 22, 60, 'fill:var(--accent)') +
         '<g class="' + P + '-float"><path d="M-112 0 H-48 M-48 0 l14 -11 v22 Z" style="stroke:var(--second);stroke-width:7;fill:var(--second)"/></g>') +
@@ -228,8 +236,8 @@ Object.assign(window.W, {
       pose(v, st) {
         const k = W.kin(st.lv), c = (x) => Math.min(1, Math.max(0, x)), o = (x) => c(x).toFixed(3), t = st.t || 0;
         const lift = st.lift || 0, Z = [0, 0, 0];
-        const D = { '': Z, base: Z, wt: [0, k.h, 0], hut: [0, lift, 0], lid: [-50 * (1 - (st.lid || 0)), lift, 0], vent: [0, 300 * (1 - (st.vent || 0)), 0], pack: [0, lift + 220 * (1 - (st.pack || 0)), 0], lamp: [0, lift, 0] };
-        const A = { base: st.base || 0, lid: st.lidOn || 0, vent: (st.vent || 0) * 4, pack: (st.pack || 0) * 4, lamp: st.lamp || 0 };
+        const D = { '': Z, base: Z, wt: [0, k.h, 0], hut: [0, lift, 0], lid: [-50 * (1 - (st.lid || 0)), lift, 0], vent: [0, 300 * (1 - (st.vent || 0)), 0], pack: [0, lift + 220 * (1 - (st.pack || 0)), 0], lamp: [0, lift, 0], sol: [0, lift, 0] };
+        const A = { base: st.base || 0, lid: st.lidOn || 0, vent: (st.vent || 0) * 4, pack: (st.pack || 0) * 4, lamp: st.lamp || 0, sol: Math.min(1, (st.lamp || 0) / 0.7) };
         for (const q of faces) {
           q.el.setAttribute('transform', v.m(q.k, q.o, D[q.g] || Z));
           if (A[q.g] !== undefined) q.el.style.opacity = o(A[q.g]);
@@ -267,6 +275,37 @@ Object.assign(window.W, {
         return k;
       },
     };
+  },
+  // v3.2 data charts for the left panel. Every value comes from context/data-pack (see the figure table in HANDOFF_README.md).
+  // Horizontal bars. rows: [label, value, text, colour]; values are shares of max.
+  barsHtml(cls, rows, max) {
+    return '<div class="td-chart">' + rows.map((r) => '<div class="td-row"><span>' + r[0] + '</span><div class="td-bt"><div class="td-bf ' + cls + '" data-v="' + (r[1] / max).toFixed(4) + '" style="background:' + r[3] + '"></div></div><span class="td-bv" style="color:' + r[3] + '">' + r[2] + '</span></div>').join('') + '</div>';
+  },
+  // Columns by year. rows: [label, value, colour, note shown over the column or ''].
+  colsHtml(cls, rows, max) {
+    return '<div class="td-cols">' + rows.map((r) => '<div class="td-col"><div class="td-ct"><div class="td-cf ' + cls + '" data-v="' + (r[1] / max).toFixed(4) + '" style="background:' + r[2] + '">' + (r[3] ? '<span class="td-cn">' + r[3] + '</span>' : '') + '</div></div><span>' + r[0] + '</span></div>').join('') + '</div>';
+  },
+  // A 10-wide grid of dots, the first n filled.
+  dotsHtml(cls, total, n) {
+    let s = '<div class="td-dots">';
+    for (let i = 0; i < total; i++) s += '<i class="td-dot ' + cls + (i < n ? ' on' : '') + '"></i>';
+    return s + '</div>';
+  },
+  // One stacked bar with a key. parts: [label, value, colour, text].
+  stackHtml(cls, parts) {
+    const sum = parts.reduce((a, p) => a + p[1], 0);
+    return '<div class="td-stack">' + parts.map((p) => '<div class="' + cls + '" style="width:' + (100 * p[1] / sum).toFixed(2) + '%;background:' + p[2] + '"></div>').join('') + '</div>' +
+      '<div class="td-key">' + parts.map((p) => '<i style="background:' + p[2] + '"></i><span>' + p[0] + '</span><b>' + p[3] + '</b>').join('') + '</div>';
+  },
+  // Grow charts from t: bars and columns one after another, dots in reading order, stack parts left to right.
+  grow(kit, els, t, t0, step, kind) {
+    els.forEach((el, i) => {
+      const a = kit.eo(kit.seg(t, t0 + i * step, t0 + i * step + 0.5));
+      if (kind === 'x') el.style.transform = 'scaleX(' + (a * +el.dataset.v).toFixed(4) + ')';
+      else if (kind === 'y') { el.style.height = (100 * a * +el.dataset.v).toFixed(2) + '%'; const n = el.firstChild; if (n) n.style.opacity = kit.seg(t, t0 + i * step + 0.4, t0 + i * step + 0.7).toFixed(3); }
+      else if (kind === 's') el.style.transform = 'scaleX(' + a.toFixed(4) + ')';
+      else el.style.transform = 'scale(' + kit.eob(kit.seg(t, t0 + i * step, t0 + i * step + 0.35), 1.6).toFixed(3) + ')';
+    });
   },
   // The console every scene shares: a window card with the model in it, a readout on the left and live gauges on the right. A scene adds its own words.
   rig(kit, id, o) {
