@@ -1,5 +1,7 @@
 # FloodSafe Sanitation Gambella: pitch animation
 
+> **This is an older version (v3.1, 19 Nov 2026).** The latest animation is always on [`main`](../../tree/main). Its README lists every version branch. The tables below describe the repo as it was when v3.1 was the latest.
+
 ## 📌 Videos (MP4)
 
 **▶ [Play the latest: v3.1, 48.5 s, with the Anatomy gauge scene](https://edison9733.github.io/sus_animation/web/v3.1_FloodSafe-Gambella_48s_teardown-film-with-anatomy-gauge-scene.mp4)** · [slow connection? 480p](https://edison9733.github.io/sus_animation/web/480/v3.1_FloodSafe-Gambella_48s_teardown-film-with-anatomy-gauge-scene.mp4)
